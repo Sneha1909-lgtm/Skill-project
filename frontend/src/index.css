@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #E11D48;
+  --color-primary-dark: #BE123C;
+  --color-primary-light: #FB7185;
+  --color-secondary: #0F172A;
+  --color-secondary-dark: #020617;
+  --color-background: #F1F5F9;
+  --color-success: #22C55E;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-slate-900 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-2.5 rounded-xl font-semibold transition-all duration-300;
+  }
+  .btn-primary {
+    @apply bg-primary text-white;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl;
+  }
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold;
+  }
+}

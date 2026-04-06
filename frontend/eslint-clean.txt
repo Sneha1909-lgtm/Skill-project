@@ -1,0 +1,348 @@
+
+FILE: C:\Users\HP\Desktop\FSAD\sneha\frontend\src\components\layout\Sidebar.jsx
+38:8 Parsing error: Identifier 'React' has already been declared
+FILE: C:\Users\HP\Desktop\FSAD\sneha\frontend\src\context\AuthContext.jsx
+3:14 Fast refresh only works when a file only exports components. Move your React context(s) to a separate file.
+FILE: C:\Users\HP\Desktop\FSAD\sneha\frontend\src\context\DataContext.jsx
+3:14 Fast refresh only works when a file only exports components. Move your React context(s) to a separate file.
+FILE: C:\Users\HP\Desktop\FSAD\sneha\frontend\src\pages\DashboardPage.jsx
+37:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  35 |         {role === 'student' && (
+  36 |           <>
+> 37 |             <StatPanel title="Current GPA" value="3.8" icon="📈" color="#38bdf8" />
+     |              ^^^^^^^^^ This component is created during render
+  38 |             <StatPanel title="Attendance" value="92%" icon="⏰" color="#2dd4bf" />
+  39 |             <StatPanel title="Assignments Due" value="4" icon="📝" color="#f43f5e" />
+  40 |             <StatPanel title="Credits Earned" value="65" icon="🎓" color="#818cf8" />
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+38:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  36 |           <>
+  37 |             <StatPanel title="Current GPA" value="3.8" icon="📈" color="#38bdf8" />
+> 38 |             <StatPanel title="Attendance" value="92%" icon="⏰" color="#2dd4bf" />
+     |              ^^^^^^^^^ This component is created during render
+  39 |             <StatPanel title="Assignments Due" value="4" icon="📝" color="#f43f5e" />
+  40 |             <StatPanel title="Credits Earned" value="65" icon="🎓" color="#818cf8" />
+  41 |           </>
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+39:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  37 |             <StatPanel title="Current GPA" value="3.8" icon="📈" color="#38bdf8" />
+  38 |             <StatPanel title="Attendance" value="92%" icon="⏰" color="#2dd4bf" />
+> 39 |             <StatPanel title="Assignments Due" value="4" icon="📝" color="#f43f5e" />
+     |              ^^^^^^^^^ This component is created during render
+  40 |             <StatPanel title="Credits Earned" value="65" icon="🎓" color="#818cf8" />
+  41 |           </>
+  42 |         )}
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+40:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  38 |             <StatPanel title="Attendance" value="92%" icon="⏰" color="#2dd4bf" />
+  39 |             <StatPanel title="Assignments Due" value="4" icon="📝" color="#f43f5e" />
+> 40 |             <StatPanel title="Credits Earned" value="65" icon="🎓" color="#818cf8" />
+     |              ^^^^^^^^^ This component is created during render
+  41 |           </>
+  42 |         )}
+  43 |         {role === 'faculty' && (
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+45:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  43 |         {role === 'faculty' && (
+  44 |           <>
+> 45 |             <StatPanel title="Active Classes" value="5" icon="🏫" color="#818cf8" />
+     |              ^^^^^^^^^ This component is created during render
+  46 |             <StatPanel title="Students Enrolled" value="142" icon="👥" color="#2dd4bf" />
+  47 |             <StatPanel title="Pending Grades" value="28" icon="📑" color="#f43f5e" />
+  48 |             <StatPanel title="Meetings Today" value="2" icon="📅" color="#fb923c" />
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+46:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  44 |           <>
+  45 |             <StatPanel title="Active Classes" value="5" icon="🏫" color="#818cf8" />
+> 46 |             <StatPanel title="Students Enrolled" value="142" icon="👥" color="#2dd4bf" />
+     |              ^^^^^^^^^ This component is created during render
+  47 |             <StatPanel title="Pending Grades" value="28" icon="📑" color="#f43f5e" />
+  48 |             <StatPanel title="Meetings Today" value="2" icon="📅" color="#fb923c" />
+  49 |           </>
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+47:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  45 |             <StatPanel title="Active Classes" value="5" icon="🏫" color="#818cf8" />
+  46 |             <StatPanel title="Students Enrolled" value="142" icon="👥" color="#2dd4bf" />
+> 47 |             <StatPanel title="Pending Grades" value="28" icon="📑" color="#f43f5e" />
+     |              ^^^^^^^^^ This component is created during render
+  48 |             <StatPanel title="Meetings Today" value="2" icon="📅" color="#fb923c" />
+  49 |           </>
+  50 |         )}
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+48:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  46 |             <StatPanel title="Students Enrolled" value="142" icon="👥" color="#2dd4bf" />
+  47 |             <StatPanel title="Pending Grades" value="28" icon="📑" color="#f43f5e" />
+> 48 |             <StatPanel title="Meetings Today" value="2" icon="📅" color="#fb923c" />
+     |              ^^^^^^^^^ This component is created during render
+  49 |           </>
+  50 |         )}
+  51 |         {role === 'admin' && (
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+53:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  51 |         {role === 'admin' && (
+  52 |           <>
+> 53 |             <StatPanel title="Total Students" value="1,250" icon="👨‍🎓" color="#38bdf8" />
+     |              ^^^^^^^^^ This component is created during render
+  54 |             <StatPanel title="Faculty Members" value="125" icon="👩‍🏫" color="#2dd4bf" />
+  55 |             <StatPanel title="System Alerts" value="0" icon="🛡️" color="#22c55e" />
+  56 |             <StatPanel title="Server Load" value="14%" icon="💻" color="#a855f7" />
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+54:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  52 |           <>
+  53 |             <StatPanel title="Total Students" value="1,250" icon="👨‍🎓" color="#38bdf8" />
+> 54 |             <StatPanel title="Faculty Members" value="125" icon="👩‍🏫" color="#2dd4bf" />
+     |              ^^^^^^^^^ This component is created during render
+  55 |             <StatPanel title="System Alerts" value="0" icon="🛡️" color="#22c55e" />
+  56 |             <StatPanel title="Server Load" value="14%" icon="💻" color="#a855f7" />
+  57 |           </>
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+55:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  53 |             <StatPanel title="Total Students" value="1,250" icon="👨‍🎓" color="#38bdf8" />
+  54 |             <StatPanel title="Faculty Members" value="125" icon="👩‍🏫" color="#2dd4bf" />
+> 55 |             <StatPanel title="System Alerts" value="0" icon="🛡️" color="#22c55e" />
+     |              ^^^^^^^^^ This component is created during render
+  56 |             <StatPanel title="Server Load" value="14%" icon="💻" color="#a855f7" />
+  57 |           </>
+  58 |         )}
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+56:14 Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  54 |             <StatPanel title="Faculty Members" value="125" icon="👩‍🏫" color="#2dd4bf" />
+  55 |             <StatPanel title="System Alerts" value="0" icon="🛡️" color="#22c55e" />
+> 56 |             <StatPanel title="Server Load" value="14%" icon="💻" color="#a855f7" />
+     |              ^^^^^^^^^ This component is created during render
+  57 |           </>
+  58 |         )}
+  59 |       </div>
+
+   6 |   const { user, role, name } = useContext(AuthContext);
+   7 |
+>  8 |   const StatPanel = ({ title, value, icon, color }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |     <div className="stat-card" style={{ borderTop: `2px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |   );
+     | ^^^^ The component is created during render here
+  19 |
+  20 |   return (
+  21 |     <div className="dashboard-page">
+FILE: C:\Users\HP\Desktop\FSAD\sneha\frontend\src\services\authService.js
+2:29 'email' is defined but never used.
+2:36 'password' is defined but never used.
+7:32 'data' is defined but never used.

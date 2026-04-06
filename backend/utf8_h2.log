@@ -1,0 +1,150 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.apexglobal:erp >-------------------------
+[INFO] Building University_ERP 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.5:run (default-cli) > test-compile @ erp >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ erp ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ erp ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ erp ---
+[INFO] skip non existing resourceDirectory C:\Users\HP\Desktop\FSAD\sneha\frontend\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ erp ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.0.5:run (default-cli) < test-compile @ erp <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.5:run (default-cli) @ erp ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.5)
+
+2026-04-05T00:10:45.658+05:30  INFO 22340 --- [           main] c.a.erp.UniversityErpApplication         : Starting UniversityErpApplication using Java 21.0.9 with PID 22340 (C:\Users\HP\Desktop\FSAD\sneha\frontend\backend\target\classes started by HP in C:\Users\HP\Desktop\FSAD\sneha\frontend\backend)
+2026-04-05T00:10:45.662+05:30  INFO 22340 --- [           main] c.a.erp.UniversityErpApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-04-05T00:10:46.192+05:30  INFO 22340 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-05T00:10:46.236+05:30  INFO 22340 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
+2026-04-05T00:10:46.675+05:30  INFO 22340 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-05T00:10:46.686+05:30  INFO 22340 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-05T00:10:46.686+05:30  INFO 22340 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-05T00:10:46.735+05:30  INFO 22340 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1026 ms
+2026-04-05T00:10:46.874+05:30  INFO 22340 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-05T00:10:46.916+05:30  INFO 22340 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-05T00:10:47.255+05:30  INFO 22340 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-05T00:10:47.276+05:30  INFO 22340 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-05T00:10:47.405+05:30  INFO 22340 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:university_erp user=SA
+2026-04-05T00:10:47.405+05:30  INFO 22340 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-05T00:10:47.414+05:30  WARN 22340 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-05T00:10:47.438+05:30  INFO 22340 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:university_erp]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: UNIVERSITY_ERP/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-05T00:10:48.387+05:30  INFO 22340 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: create table marks (mark_id bigint generated by default as identity, grade varchar(5), marks_amount numeric(5,2), evaluated_by bigint, student_id bigint not null, subject_id bigint not null, primary key (mark_id))
+Hibernate: create table permissions (permission_id bigint generated by default as identity, name varchar(255) not null, primary key (permission_id))
+Hibernate: create table role_permissions (role_id bigint not null, permission_id bigint not null, primary key (role_id, permission_id))
+Hibernate: create table roles (role_id bigint generated by default as identity, name varchar(255) not null, primary key (role_id))
+Hibernate: create table students (student_id bigint not null, contact_details varchar(255), dob date, gender varchar(10), name varchar(255), primary key (student_id))
+Hibernate: create table subjects (subject_id bigint generated by default as identity, name varchar(255) not null, faculty_id bigint, primary key (subject_id))
+Hibernate: create table users (user_id bigint generated by default as identity, created_at timestamp(6), password varchar(255) not null, status varchar(20), updated_at timestamp(6), username varchar(255) not null, role_id bigint, primary key (user_id))
+Hibernate: alter table if exists permissions drop constraint if exists UKpnvtwliis6p05pn6i3ndjrqt2
+Hibernate: alter table if exists permissions add constraint UKpnvtwliis6p05pn6i3ndjrqt2 unique (name)
+Hibernate: alter table if exists roles drop constraint if exists UKofx66keruapi6vyqpv6f2or37
+Hibernate: alter table if exists roles add constraint UKofx66keruapi6vyqpv6f2or37 unique (name)
+Hibernate: alter table if exists users drop constraint if exists UKr43af9ap4edm43mmtq01oddj6
+Hibernate: alter table if exists users add constraint UKr43af9ap4edm43mmtq01oddj6 unique (username)
+Hibernate: alter table if exists marks add constraint FKno3l0ch1cpx5jcl5giwy5c4pv foreign key (evaluated_by) references users
+Hibernate: alter table if exists marks add constraint FK6o5buy4g7i65v20hjy9inwn05 foreign key (student_id) references students
+Hibernate: alter table if exists marks add constraint FKbobdu0dce8k5vpm5mbd5ggpb1 foreign key (subject_id) references subjects
+Hibernate: alter table if exists role_permissions add constraint FKegdk29eiy7mdtefy5c7eirr6e foreign key (permission_id) references permissions
+Hibernate: alter table if exists role_permissions add constraint FKn5fotdgk8d1xvo8nav9uv3muc foreign key (role_id) references roles
+Hibernate: alter table if exists students add constraint FKnl1q3iljhy1184875o5nu9ryy foreign key (student_id) references users
+Hibernate: alter table if exists subjects add constraint FKhrhkdcapj3c7v4epc5c95vkal foreign key (faculty_id) references users
+Hibernate: alter table if exists users add constraint FKp56c1712k691lhsyewcssf40f foreign key (role_id) references roles
+2026-04-05T00:10:48.455+05:30  INFO 22340 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-05T00:10:48.506+05:30  INFO 22340 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-05T00:10:48.701+05:30 ERROR 22340 --- [           main] t.s.DeferredServletContainerInitializers : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\HP\Desktop\FSAD\sneha\frontend\backend\target\classes\com\apexglobal\erp\security\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'securityConfig' defined in file [C:\Users\HP\Desktop\FSAD\sneha\frontend\backend\target\classes\com\apexglobal\erp\config\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'jwtAuthenticationFilter': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2026-04-05T00:10:48.728+05:30  INFO 22340 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-05T00:10:48.731+05:30  WARN 22340 --- [           main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1:housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2026-04-05T00:10:48.731+05:30  WARN 22340 --- [           main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1:connection-adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ java.base/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2026-04-05T00:10:48.733+05:30  WARN 22340 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-04-05T00:10:48.733+05:30  INFO 22340 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-05T00:10:48.736+05:30  INFO 22340 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-05T00:10:48.739+05:30  INFO 22340 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-05T00:10:48.741+05:30  INFO 22340 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-05T00:10:48.759+05:30 ERROR 22340 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+|  jwtAuthenticationFilter defined in file [C:\Users\HP\Desktop\FSAD\sneha\frontend\backend\target\classes\com\apexglobal\erp\security\JwtAuthenticationFilter.class]
+Γåæ     Γåô
+|  securityConfig defined in file [C:\Users\HP\Desktop\FSAD\sneha\frontend\backend\target\classes\com\apexglobal\erp\config\SecurityConfig.class]
+ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.447 s
+[INFO] Finished at: 2026-04-05T00:10:48+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.0.5:run (default-cli) on project erp: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

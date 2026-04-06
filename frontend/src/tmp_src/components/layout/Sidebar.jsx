@@ -1,0 +1,139 @@
+import React, { useState, useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  LayoutDashboard, 
+  Users, 
+  BookOpen, 
+  GraduationCap, 
+  Calendar, 
+  CheckCircle, 
+  CreditCard, 
+  Library, 
+  Settings, 
+  ChevronLeft, 
+  ChevronRight,
+  LogOut,
+  Bell,
+  Search,
+  MessageSquare
+} from 'lucide-react';
+import { AuthContext } from '../../context/AuthContext.jsx';
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+const Sidebar = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const { role, user, logout, name } = useContext(AuthContext);
+
+  const menuItems = {
+    admin: [
+      { icon: LayoutDashboard, label: 'Overview', path: '/admin' },
+      { icon: Users, label: 'User Governance', path: '/admin' },
+      { icon: BookOpen, label: 'Curriculum', path: '/admin' },
+      { icon: Bell, label: 'Broadcasts', path: '/admin' },
+    ],
+    faculty: [
+      { icon: LayoutDashboard, label: 'Instructor Hub', path: '/faculty' },
+      { icon: CheckCircle, label: 'Attendance', path: '/faculty' },
+      { icon: GraduationCap, label: 'Grading', path: '/faculty' },
+      { icon: Calendar, label: 'Schedule', path: '/faculty' },
+    ],
+    student: [
+      { icon: LayoutDashboard, label: 'Student Hub', path: '/dashboard' },
+      { icon: Library, label: 'Library', path: '/student' },
+      { icon: CreditCard, label: 'Finance', path: '/student' },
+      { icon: BookOpen, label: 'Academic Record', path: '/student' },
+    ],
+    warden: [
+      { icon: LayoutDashboard, label: 'Hostel Hub', path: '/warden' },
+      { icon: Settings, label: 'Maintenance', path: '/warden' },
+    ]
+  };
+
+  const currentMenu = menuItems[role] || menuItems.student;
+
+  if (!user) return null;
+
+  return (
+    <motion.aside
+      initial={false}
+      animate={{ width: isCollapsed ? 80 : 280 }}
+      className="bg-secondary-dark text-slate-400 h-screen sticky top-0 flex flex-col z-50 shadow-2xl border-r border-white/5"
+    >
+      {/* Brand Section */}
+      <div className="h-20 flex items-center px-6 gap-4 border-b border-white/5 glass-dark">
+        <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 shrink-0">
+          <GraduationCap className="text-white" size={24} />
+        </div>
+        <AnimatePresence>
+          {!isCollapsed && (
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -10 }}
+              className="font-display font-bold text-white tracking-tight text-xl truncate"
+            >
+              ERP Nexus
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Navigation */}
+      <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto custom-scrollbar">
+        {currentMenu.map((item, index) => (
+          <NavLink
+            key={item.label}
+            to={item.path}
+            className={({ isActive }) => 
+              twMerge(
+                "group flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 relative",
+                isActive ? "bg-primary text-white shadow-lg shadow-primary/20" : "hover:bg-white/5 hover:text-white"
+              )
+            }
+          >
+            <item.icon size={22} className={clsx("shrink-0 transition-transform group-hover:scale-110")} />
+            {!isCollapsed && (
+              <motion.span
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="font-semibold text-sm whitespace-nowrap"
+              >
+                {item.label}
+              </motion.span>
+            )}
+          </NavLink>
+        ))}
+      </nav>
+
+      {/* Bottom Actions */}
+      <div className="p-4 border-t border-white/5 bg-secondary-dark/50">
+        <button
+          onClick={logout}
+          className="flex items-center gap-4 px-4 py-3 w-full rounded-xl hover:bg-error/10 hover:text-error transition-all group"
+        >
+          <LogOut size={22} className="shrink-0" />
+          {!isCollapsed && (
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="font-semibold text-sm"
+            >
+              Sign Out
+            </motion.span>
+          )}
+        </button>
+
+        <button
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          className="mt-2 flex items-center justify-center w-full h-10 rounded-lg bg-white/5 hover:bg-white/10 text-slate-500 transition-colors"
+        >
+          {isCollapsed ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}
+        </button>
+      </div>
+    </motion.aside>
+  );
+};
+
+export default Sidebar;
