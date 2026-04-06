@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # 🗄️ Institutional Data Node
+  db:
+    image: mysql:8.0
+    container_name: nexus-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: klu_erp
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  # ⚡ Institutional Application Node
+  app:
+    build: .
+    container_name: nexus-app
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/klu_erp?useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+
+volumes:
+  mysql_data:
