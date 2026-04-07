@@ -6,16 +6,21 @@ spring:
     url: ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-    driverClassName: org.postgresql.Driver
+    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: update   # change to 'validate' after stable
     show-sql: false
+    open-in-view: false
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: false
+
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
 
 app:
   security:
