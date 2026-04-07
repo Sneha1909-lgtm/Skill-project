@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from 'sonner';
+import { Analytics } from '@vercel/analytics/react';
 import { AuthProvider } from './context/AuthContext.jsx';
 import { DataProvider } from './context/DataContext.jsx';
 import AppRoutes from './routes/AppRoutes.jsx';
@@ -25,6 +26,7 @@ function App() {
                <AppRoutes />
             </div>
             <Toaster position="top-right" richColors closeButton theme="dark" />
+            <Analytics />
           </Router>
         </DataProvider>
       </AuthProvider>
